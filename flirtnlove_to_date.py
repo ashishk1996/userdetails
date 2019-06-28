@@ -1,12 +1,16 @@
 #!/usr/bin/python
 import mysql.connector
 import traceback
+host = 'localhost'
+user = 'root'
+password = 'password'
+database = 'devpiin'
 try:
     mydb = mysql.connector.connect(
-      host="localhost",
-      user="root",
-      password="password",
-      database="devpiin"
+      host=host,
+      user=user,
+      password=password,
+      database=database
     )
 except Exception, e:
     print(e)
@@ -233,9 +237,9 @@ def run_flirtlove_to_date_update():
 
 def queries_run():
     try:
-        sql1 = "UPDATE  `piin`.`userdetails` SET `job` = ' ' WHERE `job` is null"
+        sql1 = "UPDATE `userdetails` SET `job` = ' ' WHERE `job` is null"
         mysql_command(sql1)
-        sql2 = "ALTER TABLE `piin`.`userdetails`CHANGE COLUMN `sexualid` `sexualid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `sexualityvisibility` `sexualityvisibility` TINYINT(1) NULL DEFAULT NULL ,CHANGE COLUMN `bodytypeid` `bodytypeid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `familyplanid` `familyplanid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `kidid` `kidid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `job` `job` VARCHAR(128) CHARACTER SET 'utf8mb4' NOT NULL ,CHANGE COLUMN `ethnicityid` `ethnicityid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `religionid` `religionid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `religionvisibility` `religionvisibility` TINYINT(1) NULL DEFAULT NULL ,CHANGE COLUMN `educationid` `educationid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `hairid` `hairid` INT(11) NULL DEFAULT NULL"
+        sql2 = "ALTER TABLE `userdetails`CHANGE COLUMN `sexualid` `sexualid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `sexualityvisibility` `sexualityvisibility` TINYINT(1) NULL DEFAULT NULL ,CHANGE COLUMN `bodytypeid` `bodytypeid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `familyplanid` `familyplanid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `kidid` `kidid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `job` `job` VARCHAR(128) CHARACTER SET 'utf8mb4' NOT NULL ,CHANGE COLUMN `ethnicityid` `ethnicityid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `religionid` `religionid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `religionvisibility` `religionvisibility` TINYINT(1) NULL DEFAULT NULL ,CHANGE COLUMN `educationid` `educationid` INT(11) NULL DEFAULT NULL ,CHANGE COLUMN `hairid` `hairid` INT(11) NULL DEFAULT NULL"
         mysql_command(sql2)
 
         run_flirtlove_to_date_update()
