@@ -1,16 +1,18 @@
 #!/usr/bin/python
 import mysql.connector
 import traceback
-host = 'localhost'
+host = '127.0.0.1'
 user = 'root'
 password = 'password'
 database = 'devpiin'
+port = 3306
 try:
     mydb = mysql.connector.connect(
       host=host,
       user=user,
       password=password,
-      database=database
+      database=database,
+      port=port
     )
 except Exception, e:
     print(e)
