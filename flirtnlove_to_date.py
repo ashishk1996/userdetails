@@ -6,7 +6,7 @@ try:
       host="localhost",
       user="root",
       password="password",
-      database="prodpiin"
+      database="devpiin"
     )
 except Exception, e:
     print(e)
