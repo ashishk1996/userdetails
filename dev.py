@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import mysql.connector
 import traceback
-host = '127.0.0.1'
+host = 'localhost'
 user = 'root'
 password = 'Services@123'
 database = 'piin'
