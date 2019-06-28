@@ -3,18 +3,11 @@ import mysql.connector
 import traceback
 host = '127.0.0.1'
 user = 'root'
-<<<<<<< HEAD:dev.py
 password = 'Services@123'
 database = 'piin'
-port=3307
-=======
-password = 'password'
-database = 'devpiin'
 port = 3306
->>>>>>> 4a9a127554c9c133efa804d35c55a2958f057cf4:flirtnlove_to_date.py
 try:
     mydb = mysql.connector.connect(
-      port=port,  
       host=host,
       user=user,
       password=password,
