@@ -8,8 +8,14 @@ Steps to run flirtnlove_to_date.py
   Install python 2.7
   
   Run following commands/Install these dependencies
+  
     1) sudo apt update
+    
     2) sudo apt install python
+    
     3) sudo apt install python-pip
+    
     4) sudo pip install mysql-connector==2.2.9
+    
+ Usage - Run as bash script.
 
